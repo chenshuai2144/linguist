@@ -54,7 +54,6 @@ export class LocDir {
   } {
     const paths = globby.sync('**', {
       cwd: this.pattern,
-      globDebug: true,
       ignore: [
         '**/*.map',
         '**/yarn**',
