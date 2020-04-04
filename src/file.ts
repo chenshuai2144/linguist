@@ -2,7 +2,7 @@
  * detect file info
  */
 
-import * as fs from 'fs-extra';
+import * as fs from 'fs';
 import * as Path from 'path';
 // @ts-ignore
 import slash from 'slash2';
@@ -129,7 +129,6 @@ export class LocFile {
       info.size = (stat && stat.size) || 0;
       info.languages = this.getType(this.path);
       if (!info.languages) {
-        console.log(this.path);
         return info;
       }
       if (newData) {

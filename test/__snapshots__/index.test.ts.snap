@@ -2,9 +2,9 @@
 
 exports[`LocFile dir info 1`] = `
 Object {
-  "code": 339,
+  "code": 341,
   "comment": 71,
-  "total": 446,
+  "total": 448,
 }
 `;
 
@@ -23,47 +23,71 @@ Object {
     "total": 126,
   },
   "typescript": Object {
-    "code": 155,
+    "code": 157,
     "comment": 54,
     "sum": 2,
-    "total": 237,
+    "total": 239,
   },
 }
 `;
 
 exports[`LocFile dir info 3`] = `
 Object {
-  "code": 770,
-  "comment": 186,
-  "total": 1075,
+  "code": 5223,
+  "comment": 231,
+  "total": 5950,
 }
 `;
 
 exports[`LocFile dir info 4`] = `
 Object {
-  "javascript": Object {
-    "code": 70,
-    "comment": 6,
+  "": Object {
+    "code": 0,
+    "comment": 0,
+    "sum": 6,
+    "total": 0,
+  },
+  "ejs": Object {
+    "code": 199,
+    "comment": 0,
     "sum": 1,
-    "total": 83,
+    "total": 215,
+  },
+  "javascript": Object {
+    "code": 45,
+    "comment": 28,
+    "sum": 2,
+    "total": 81,
   },
   "json": Object {
-    "code": 85,
-    "comment": 3,
+    "code": 54,
+    "comment": 4,
     "sum": 3,
-    "total": 91,
+    "total": 61,
+  },
+  "less": Object {
+    "code": 489,
+    "comment": 2,
+    "sum": 12,
+    "total": 558,
   },
   "markdown": Object {
-    "code": 157,
-    "comment": 12,
+    "code": 36,
+    "comment": 0,
+    "sum": 1,
+    "total": 58,
+  },
+  "svg": Object {
+    "code": 2,
+    "comment": 0,
     "sum": 2,
-    "total": 197,
+    "total": 2,
   },
   "typescript": Object {
-    "code": 458,
-    "comment": 165,
-    "sum": 8,
-    "total": 704,
+    "code": 4398,
+    "comment": 197,
+    "sum": 85,
+    "total": 4975,
   },
 }
 `;
