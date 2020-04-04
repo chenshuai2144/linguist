@@ -1,6 +1,6 @@
 {
   "name": "@umijs/linguist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a tool to count the code in the repo",
   "keywords": [
     "loc",
