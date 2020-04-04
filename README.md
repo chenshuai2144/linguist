@@ -1,69 +1,102 @@
-[![npm version](https://badge.fury.io/js/@umijs/linguist.svg)](https://www.npmjs.com/package/@umijs/linguist) [![Build Status](https://travis-ci.org/ephoton/@umijs/linguist.svg?branch=master)](https://travis-ci.org/ephoton/@umijs/linguist) [![Coverage Status](https://coveralls.io/repos/github/ephoton/@umijs/linguist/badge.svg?branch=master)](https://coveralls.io/github/ephoton/@umijs/linguist?branch=master)
+[![npm version](https://badge.fury.io/js/%40umijs%2Flinguist.svg)](https://badge.fury.io/js/%40umijs%2Flinguist) ![Node CI](https://github.com/chenshuai2144/linguist/workflows/Node%20CI/badge.svg) [![](https://img.shields.io/npm/dw/@umijs/linguist.svg)](https://www.npmjs.com/package/@umijs/linguist)
 
 # @umijs/linguist
 
-💻 Counts the number of lines of code, written in TypeScript.
-
-## Prerequisites
-
-- Node.js 6+
+一个查看你代码行数和各种信息的工具，对 js 项目的支持性最好。
 
 ## Install
 
 ```bash
 npm install @umijs/linguist
-```
 
-or
-
-```
+----
 yarn add @umijs/linguist
 ```
 
 ## Usage
 
-You can use node-cloc in you ternimal, or as a npm package in your projects.
+你可以在命令行中使用，也可以用 node 来调用。
 
 ### Command line mode
 
-Support CLOC of a file or directory.
+支持传入一个文件或者文件夹
 
-#### 1. file
+#### 扫描一个文件夹
 
 ```bash
 # loc file <path>
-loc file src/index.ts
+loc src
 ```
 
-![loc file <path>](https://user-images.githubusercontent.com/3739221/31838697-9fdec114-b5a3-11e7-890e-795444bc9400.png)
+<img width="583" alt="sshot-1" src="https://user-images.githubusercontent.com/8186664/78422305-f110ce00-7690-11ea-845f-24a6c695da06.png">
 
-#### 2. directory
+#### 扫描一个文件
 
 ```bash
 # loc dir <pattern>
-loc dir **/*.ts
+loc /src/index.ts
 ```
 
-![loc dir <pattern>](https://user-images.githubusercontent.com/3739221/31838695-9f94a340-b5a3-11e7-914a-91629d2cfa9f.png)
+<img width="390" alt="sshot-2" src="https://user-images.githubusercontent.com/8186664/78422303-eb1aed00-7690-11ea-8dd3-7081511a8955.png">
 
-### Third-party mode(in TypeScript)
+### 在 node 中使用
 
-```
-import { LocFile, LocDir } from '@umijs/linguist';
-
-// for a file.
-const file = new LocFile(filePath);
-const { info } = file.getInfo();
-
-//  for a directory.
-const dir = new LocDir(pattern);
-const { info } = dir.getInfo();
+```javascript
+const loc = require('@umijs/linguist');
+// 输入文件ji
+loc(file | dir);
 ```
 
-### Features
+输出文件
 
-- Support both command line mode and third-party package mode.
-- Written in TypeScript with complete define types.
+```json
+ {
+
+  "ejs":  {
+    "code": 199,
+    "comment": 0,
+    "sum": 1,
+    "total": 215,
+  },
+  "javascript":  {
+    "code": 45,
+    "comment": 28,
+    "sum": 2,
+    "total": 81,
+  },
+  "json":  {
+    "code": 54,
+    "comment": 4,
+    "sum": 3,
+    "total": 61,
+  },
+  "less":  {
+    "code": 489,
+    "comment": 2,
+    "sum": 12,
+    "total": 558,
+  },
+  "markdown":  {
+    "code": 36,
+    "comment": 0,
+    "sum": 1,
+    "total": 58,
+  },
+  "svg":  {
+    "code": 2,
+    "comment": 0,
+    "sum": 2,
+    "total": 2,
+  },
+  "typescript":  {
+    "code": 4398,
+    "comment": 197,
+    "sum": 85,
+    "total": 4975,
+  },
+}
+`
+```
 
 ## License
 
