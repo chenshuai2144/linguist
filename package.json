@@ -32,6 +32,7 @@
   },
   "scripts": {
     "build": "tsc -d",
+    "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
     "prettier": "prettier -c --write \"**/*\"",
     "prepublishOnly": "npm run test && npm run build && np --no-cleanup --yolo --no-publish",
     "test": "umi-test"
@@ -54,9 +55,10 @@
     "@types/jest": "^25.1.5",
     "@types/mocha": "^2.2.43",
     "@types/node": "^8.0.45",
-    "@umijs/fabric": "^2.0.5",
+    "@umijs/fabric": "^2.0.7",
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
+    "eslint": "^6.8.0",
     "np": "^6.2.0",
     "prettier": "^2.0.2",
     "typescript": "^3.8.3"
