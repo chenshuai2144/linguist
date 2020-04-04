@@ -1,38 +1,40 @@
 {
   "name": "@umijs/linguist",
-  "version": "1.1.7",
-  "description": "ts-lib  [![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/ts-lib)",
+  "version": "1.0.0",
+  "description": "a tool to count the code in the repo",
   "keywords": [
     "loc",
     "cloc",
-    "@umijs/linguist",
+    "linguist",
+    "umijs",
     "lines of code"
   ],
-  "homepage": "https://github.com/ephoton/@umijs/linguist#readme",
+  "homepage": "https://github.com/chenshuai2144/linguist#readme",
   "bugs": {
-    "url": "https://github.com/ephoton/@umijs/linguist/issues"
+    "url": "https://github.com/chenshuai2144/linguist/issues"
+  },
+  "bin": {
+    "loc": "dist/cli.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ephoton/@umijs/linguist.git"
+    "url": "git+https://github.com/chenshuai2144/linguist.git"
   },
   "license": "MIT",
-  "author": [
-    "ephoton",
-    "chenshuai2144"
+  "authors": [
+    "ephoton <i@ephoton.me> (https://github.com/ephoton)",
+    "chenshuai2144 <qixian.cs@outlook.com> (https://github.com/chenshuai2144)"
   ],
   "main": "build/src/index.js",
   "typings": "build/src/index.d.ts",
-  "bin": {
-    "loc": "./build/src/index.js"
-  },
   "directories": {
     "test": "test"
   },
   "scripts": {
     "build": "tsc -d",
     "prettier": "prettier -c --write \"**/*\"",
-    "test": "jest"
+    "prepublishOnly": "npm run test && npm run build && np --no-cleanup --yolo --no-publish",
+    "test": "umi-test"
   },
   "dependencies": {
     "chalk": "^2.2.0",
@@ -55,6 +57,7 @@
     "@umijs/fabric": "^2.0.5",
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
+    "np": "^6.2.0",
     "prettier": "^2.0.2",
     "typescript": "^3.8.3"
   }
