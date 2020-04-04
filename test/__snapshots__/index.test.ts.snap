@@ -33,9 +33,9 @@ Object {
 
 exports[`LocFile dir info 3`] = `
 Object {
-  "code": 765,
+  "code": 770,
   "comment": 186,
-  "total": 1070,
+  "total": 1075,
 }
 `;
 
@@ -48,10 +48,10 @@ Object {
     "total": 83,
   },
   "json": Object {
-    "code": 80,
+    "code": 85,
     "comment": 3,
     "sum": 3,
-    "total": 86,
+    "total": 91,
   },
   "markdown": Object {
     "code": 157,
