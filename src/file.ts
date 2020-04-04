@@ -128,6 +128,10 @@ export class LocFile {
       info.name = name;
       info.size = (stat && stat.size) || 0;
       info.languages = this.getType(this.path);
+      if (!info.languages) {
+        console.log(this.path);
+        return info;
+      }
       if (newData) {
         info.lines = this.filterData(newData);
       }

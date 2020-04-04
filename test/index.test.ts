@@ -46,4 +46,22 @@ describe('LocFile', () => {
     expect(info.code).toEqual(98);
     expect(info.comment).toEqual(50);
   });
+
+  it('dir info', () => {
+    const tsPath = slash(path.join(__dirname, './'));
+    const file = loc(tsPath);
+    const { info, languages } = file;
+    expect(Object.keys(languages).join()).toEqual('javascript,markdown,typescript');
+    expect(info).toMatchSnapshot();
+    expect(languages).toMatchSnapshot();
+  });
+
+  it('dir info', () => {
+    const tsPath = slash(path.join(__dirname, '../'));
+    const file = loc(tsPath);
+    const { info, languages } = file;
+    expect(Object.keys(languages).join()).toEqual('json,markdown,typescript,javascript');
+    expect(info).toMatchSnapshot();
+    expect(languages).toMatchSnapshot();
+  });
 });

@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocFile dir info 1`] = `
+Object {
+  "code": 339,
+  "comment": 71,
+  "total": 446,
+}
+`;
+
+exports[`LocFile dir info 2`] = `
+Object {
+  "javascript": Object {
+    "code": 70,
+    "comment": 6,
+    "sum": 1,
+    "total": 83,
+  },
+  "markdown": Object {
+    "code": 114,
+    "comment": 11,
+    "sum": 1,
+    "total": 126,
+  },
+  "typescript": Object {
+    "code": 155,
+    "comment": 54,
+    "sum": 2,
+    "total": 237,
+  },
+}
+`;
+
+exports[`LocFile dir info 3`] = `
+Object {
+  "code": 765,
+  "comment": 186,
+  "total": 1070,
+}
+`;
+
+exports[`LocFile dir info 4`] = `
+Object {
+  "javascript": Object {
+    "code": 70,
+    "comment": 6,
+    "sum": 1,
+    "total": 83,
+  },
+  "json": Object {
+    "code": 80,
+    "comment": 3,
+    "sum": 3,
+    "total": 86,
+  },
+  "markdown": Object {
+    "code": 157,
+    "comment": 12,
+    "sum": 2,
+    "total": 197,
+  },
+  "typescript": Object {
+    "code": 458,
+    "comment": 165,
+    "sum": 8,
+    "total": 704,
+  },
+}
+`;

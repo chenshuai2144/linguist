@@ -54,7 +54,15 @@ export class LocDir {
   } {
     const paths = globby.sync('**', {
       cwd: this.pattern,
-      ignore: ['*.map', 'node_modules', 'dist'],
+      globDebug: true,
+      ignore: [
+        '**/*.map',
+        '**/yarn**',
+        '**/.github',
+        '**/node_modules/**',
+        '**/dist/**',
+        '**/*.snap',
+      ],
     });
     const files: string[] = [];
     const info: LineInfo = { ...defaultInfo };
